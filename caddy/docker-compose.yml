@@ -19,4 +19,3 @@ volumes:
                 external: true
         caddy_config:
                 external: true
-
