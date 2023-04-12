@@ -1,0 +1,44 @@
+haenoe.xyz:443 {
+	tls {
+		dns cloudflare {$CLOUDFLARE_API_TOKEN}
+	}
+	reverse_proxy 192.168.178.71:1234
+}
+
+*.tn.haenoe.xyz {
+	tls {
+		dns cloudflare {$CLOUDFLARE_API_TOKEN}
+	}
+
+	reverse_proxy 192.168.178.71:8080
+}
+
+*.haenoe.xyz {
+	tls {
+		dns cloudflare {$CLOUDFLARE_API_TOKEN}
+	}
+
+	@vaultwarden host vaultwarden.{$BASE_DOMAIN} 
+	handle @vaultwarden {
+		reverse_proxy 192.168.178.71:8080
+	}
+
+	@home host home.{$BASE_DOMAIN}
+	handle @home {
+		reverse_proxy 192.168.178.71:1234
+	}
+
+	@pihole host pihole.{$BASE_DOMAIN}
+	handle @pihole {
+		reverse_proxy 192.168.178.71:7070
+	}
+
+	@portainer host portainer.{$BASE_DOMAIN}
+	handle @portainer {
+		reverse_proxy 192.168.178.71:9000
+	}
+
+	handle {
+		abort
+	}
+}

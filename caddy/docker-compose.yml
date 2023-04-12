@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+        caddy:
+                image: haenoe/caddy-cloudflare:2
+                restart: always
+                volumes:
+                        - ./Caddyfile:/etc/caddy/Caddyfile
+                        - caddy_data:/data
+                        - caddy_config:/config
+                ports:
+                        - 443:443
+                        - 80:80
+                env_file:
+                        - .env
+
+volumes:
+        caddy_data:
+                external: true
+        caddy_config:
+                external: true
+
