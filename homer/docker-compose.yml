@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+        homer:
+                image: b4bz/homer:latest
+                restart: always
+                volumes:
+                        - ./assets:/www/assets
+                ports:
+                        - 1234:8080

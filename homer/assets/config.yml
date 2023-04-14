@@ -1,0 +1,26 @@
+title: "Homelab dashboard"
+stylesheet:
+        - "assets/theme.css"
+logo: "assets/dark_circle.png"
+
+connectivityCheck: true
+
+services:
+        - name: "My applications"
+          icon: "fa-solid fa-cloud"
+          items: 
+                - name: "PiHole" 
+                  logo: "assets/service-icons/pihole.svg"
+                  # subtitle: "ad-blocker"
+                  url: "https://pihole.haenoe.xyz/admin"
+                  type: "PiHole"
+                - name: "Portainer"
+                  logo: "assets/service-icons/portainer.svg"
+                  url: "https://192.168.178.71:9443"
+                  type: "Portainer"
+                  apikey: "ptr_+hKB/Opo3kjiOSo4132MMeaRoEP90qpSeeYTWidvQrY="
+                  enviroments:
+                          - "local"
+                - name: "Vaultwarden"
+                  logo: "assets/service-icons/bitwarden.svg"
+                  url: "https://vaultwarden.haenoe.xyz"
