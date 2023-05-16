@@ -1,16 +1,8 @@
-haenoe.xyz:443 { 
-	tls { 
-		dns cloudflare {$CLOUDFLARE_API_TOKEN}
-	}
-	reverse_proxy 192.168.178.71:1234
-}
-
-foobar.haenoe.xyz {
+haenoe.xyz:443 {
 	tls {
 		dns cloudflare {$CLOUDFLARE_API_TOKEN}
 	}
-
-	reverse_proxy 172.20.0.3:3001
+	reverse_proxy 192.168.178.71:1234
 }
 
 *.haenoe.xyz {

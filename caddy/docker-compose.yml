@@ -12,10 +12,8 @@ services:
                         - 443:443
                         - 80:80
                 env_file:
-                        - .env
+                        - caddy.env
 
 volumes:
         caddy_data:
-                external: true
         caddy_config:
-                external: true

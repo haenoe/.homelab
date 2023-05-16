@@ -15,7 +15,7 @@ services:
                 env_file:
                         - vaultwarden.env
         backup:
-                image: ttionya/vaultwarden-backup:latest
+                image: ttionya/vaultwarden-backup:1.16.0
                 restart: always
                 environment:
                         CRON: "0 * * * *"
