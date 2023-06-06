@@ -1,13 +1,13 @@
 version: '3'
 
 services:
-        homer:
-                container_name: homer
-                image: b4bz/homer:latest
-                restart: always
-                volumes:
-                        - ./assets:/www/assets
+  homer:
+    container_name: homer
+    image: b4bz/homer:latest
+    restart: always
+    volumes:
+      - ./assets:/www/assets
 networks:
-        default:
-                external: true
-                name: homelab
+  default:
+    external: true
+    name: homelab

@@ -1,28 +1,28 @@
 version: "3"
 
-secrets:
-        FOO_BAR:
-                file: ./my-secret.txt
-
 services:
-        caddy:
-                container_name: caddy
-                image: haenoe/caddy-cloudflare:2
-                restart: always
-                volumes:
-                        - ./Caddyfile:/etc/caddy/Caddyfile
-                        - caddy_data:/data
-                        - caddy_config:/config
-                ports:
-                        - 443:443
-                        - 80:80
-                env_file:
-                        - caddy.env
+  caddy:
+    container_name: caddy
+    image: haenoe/caddy-cloudflare:2
+    restart: always
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    ports:
+      - 443:443
+      - 80:80
+    environment:
+      - BASE_DOMAIN=haenoe.xyz
+    env_file:
+      - caddy.env
 
 volumes:
-        caddy_data:
-        caddy_config:
+  caddy_data:
+  caddy_config:
+
+
 networks:
-        default:
-                external: true
-                name: homelab
+  default:
+    external: true
+    name: homelab

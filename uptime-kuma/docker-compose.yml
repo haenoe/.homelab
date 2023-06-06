@@ -1,16 +1,19 @@
 version: '3'
 
 services:
-        uptime-kuma:
-                container_name: uptime
-                image: louislam/uptime-kuma:1
-                restart: always
-                volumes:
-                        - uptime-kuma:/app/data
-                        - /var/run/docker.sock:/var/run/docker.sock
+  uptime-kuma:
+    container_name: uptime
+    image: louislam/uptime-kuma:1
+    restart: always
+    volumes:
+      - uptime-kuma:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock
+
 volumes:
-        uptime-kuma:
+  uptime-kuma:
+
+
 networks:
-        default:
-                external: true
-                name: homelab
+  default:
+    external: true
+    name: homelab
