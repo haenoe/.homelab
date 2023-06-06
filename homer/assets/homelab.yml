@@ -33,7 +33,7 @@ services:
         enviroments:
           - "local"
       - name: "Vaultwarden"
-        logo: "assets/service-icons/bitwarden.svg"
+        logo: "assets/aegis-icons/Bitwarden.svg"
         url: "https://vaultwarden.haenoe.xyz"
   - name: "Services"
     icon: "fa-solid fa-heart-pulse"
@@ -42,3 +42,6 @@ services:
         logo: "assets/service-icons/pihole.svg"
         url: "https://pihole.haenoe.xyz/admin"
         type: "PiHole"
+      - name: "Migadu"
+        logo: "assets/aegis-icons/Migadu.svg"
+        url: "https://migadu.com"
