@@ -2,9 +2,14 @@ version: '3'
 
 services:
         homer:
+                container_name: homer
                 image: b4bz/homer:latest
                 restart: always
                 volumes:
                         - ./assets:/www/assets
-                ports:
-                        - 1234:8080
+                          # ports:
+                        # - 1234:8080
+networks:
+        default:
+                external: true
+                name: homelab

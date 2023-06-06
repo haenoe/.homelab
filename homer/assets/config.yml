@@ -5,13 +5,17 @@ logo: "assets/dark_circle.png"
 
 connectivityCheck: true
 
+links:
+        - name: "Second Page"
+          icon: "fas fa-file-alt"
+          url: "#page2"
+
 services:
         - name: "My applications"
           icon: "fa-solid fa-cloud"
           items: 
                 - name: "PiHole" 
                   logo: "assets/service-icons/pihole.svg"
-                  # subtitle: "ad-blocker"
                   url: "https://pihole.haenoe.xyz/admin"
                   type: "PiHole"
                 - name: "Portainer"
@@ -24,3 +28,14 @@ services:
                 - name: "Vaultwarden"
                   logo: "assets/service-icons/bitwarden.svg"
                   url: "https://vaultwarden.haenoe.xyz"
+        - name: "Nix"
+          items:
+                  - name: "Nix Search"
+                    logo: "https://cdn.simpleicons.org/nixos"
+                    url: "https://search.nixos.org/packages"
+                  - name: "NixOS Wiki"
+                    logo: "https://cdn.simpleicons.org/nixos"
+                    url: "https://nixos.wiki/wiki/Main_Page"
+                  - name: "Home-Manager Search"
+                    logo: "https://cdn.simpleicons.org/nixos"
+                    url: "https://mipmip.github.io/home-manager-option-search/"

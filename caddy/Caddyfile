@@ -20,12 +20,12 @@ foobar.haenoe.xyz {
 
 	@vaultwarden host vaultwarden.{$BASE_DOMAIN} 
 	handle @vaultwarden {
-		reverse_proxy 192.168.178.71:8080
+		reverse_proxy vaultwarden:80
 	}
 
 	@home host home.{$BASE_DOMAIN}
 	handle @home {
-		reverse_proxy 192.168.178.71:1234
+		reverse_proxy homer:8080
 	}
 
 	@pihole host pihole.{$BASE_DOMAIN}

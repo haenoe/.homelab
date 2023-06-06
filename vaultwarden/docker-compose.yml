@@ -2,12 +2,11 @@ version: "3"
 
 services:
         vaultwarden:
+                container_name: vaultwarden
                 image: vaultwarden/server:latest
                 restart: always
                 volumes:
                         - vaultwarden-data:/data/
-                ports:
-                        - "8080:80"
                 environment:
                         WEBSOCKET_ENABLED: "true"
                         SIGNUPS_ALLOWED: "true"
@@ -15,6 +14,7 @@ services:
                 env_file:
                         - vaultwarden.env
         backup:
+                container_name: vaultwarden-backup
                 image: ttionya/vaultwarden-backup:1.16.0
                 restart: always
                 environment:
@@ -34,4 +34,7 @@ volumes:
         vaultwarden-rclone-data:
                 external: true
                 name: vaultwarden-rclone-data
-
+networks:
+        default:
+                external: true
+                name: homelab

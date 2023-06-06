@@ -1,7 +1,12 @@
 version: "3"
 
+secrets:
+        FOO_BAR:
+                file: ./my-secret.txt
+
 services:
         caddy:
+                container_name: caddy
                 image: haenoe/caddy-cloudflare:2
                 restart: always
                 volumes:
@@ -17,3 +22,7 @@ services:
 volumes:
         caddy_data:
         caddy_config:
+networks:
+        default:
+                external: true
+                name: homelab
