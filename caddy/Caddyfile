@@ -1,18 +1,3 @@
-haenoe.xyz:443 { 
-	tls { 
-		dns cloudflare {$CLOUDFLARE_API_TOKEN}
-	}
-	reverse_proxy 192.168.178.71:1234
-}
-
-foobar.haenoe.xyz {
-	tls {
-		dns cloudflare {$CLOUDFLARE_API_TOKEN}
-	}
-
-	reverse_proxy 172.20.0.3:3001
-}
-
 *.haenoe.xyz {
 	tls {
 		dns cloudflare {$CLOUDFLARE_API_TOKEN}
@@ -26,6 +11,11 @@ foobar.haenoe.xyz {
 	@home host home.{$BASE_DOMAIN}
 	handle @home {
 		reverse_proxy homer:8080
+	}
+
+	@uptime host uptime.{$BASE_DOMAIN}
+	handle @uptime {
+		reverse_proxy uptime:3001
 	}
 
 	@pihole host pihole.{$BASE_DOMAIN}
