@@ -1,4 +1,4 @@
 message:
-  style: "is-warning"
+  style: "is-danger"
   title: "Error 404: Not found!"
-  content: "The specified url is doesn't exist!"
+  content: "The specified url does not exist in the homelab!"

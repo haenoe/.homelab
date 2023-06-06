@@ -29,6 +29,6 @@
 	}
 
 	handle {
-		abort
+		redir https://home.haenoe.xyz/#not-found
 	}
 }
