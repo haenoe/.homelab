@@ -1,0 +1,4 @@
+message:
+  style: "is-warning"
+  title: "Error 404: Not found!"
+  content: "The specified url is doesn't exist!"
