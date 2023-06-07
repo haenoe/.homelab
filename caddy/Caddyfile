@@ -25,7 +25,7 @@
 
 	@portainer host portainer.{$BASE_DOMAIN}
 	handle @portainer {
-		reverse_proxy 192.168.178.71:9000
+		reverse_proxy portainer:9000
 	}
 
 	handle {
