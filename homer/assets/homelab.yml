@@ -20,7 +20,7 @@ services:
       - name: "Uptime Kuma"
         logo: "assets/service-icons/uptime-kuma.svg"
         url: "https://uptime.haenoe.xyz"
-        slug: "docker"
+        slug: "homelab"
         type: "UptimeKuma"
   - name: "Applications"
     icon: "fa-solid fa-microchip"

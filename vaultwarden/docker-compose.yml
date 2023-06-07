@@ -19,7 +19,7 @@ services:
 
   backup:
     container_name: vaultwarden-backup
-    image: ttionya/vaultwarden-backup:1.16.0
+    image: ttionya/vaultwarden-backup:latest
     restart: always
     environment:
       CRON: "0 * * * *"
