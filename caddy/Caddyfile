@@ -3,6 +3,8 @@
 		dns cloudflare {$CLOUDFLARE_API_TOKEN}
 	}
 
+	header Access-Control-Allow-Origin *
+
 	@vaultwarden host vaultwarden.{$BASE_DOMAIN} 
 	handle @vaultwarden {
 		reverse_proxy vaultwarden:80
