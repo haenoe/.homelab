@@ -3,7 +3,12 @@
 		dns cloudflare {$CLOUDFLARE_API_TOKEN}
 	}
 
-	header Access-Control-Allow-Origin *
+	header {
+		Access-Control-Allow-Origin "https://home.haenoe.xyz"
+		Access-Control-Allow-Headers "x-api-key"
+		Access-Control-Allow-Methods "POST, GET, OPTIONS"
+		Access-Control-Max-Age "86400"
+	}
 
 	@vaultwarden host vaultwarden.{$BASE_DOMAIN} 
 	handle @vaultwarden {
@@ -20,14 +25,22 @@
 		reverse_proxy uptime:3001
 	}
 
+	@portainer host portainer.{$BASE_DOMAIN}
+	handle @portainer {
+		@options {
+        		method OPTIONS
+			header Access-Control-Request-Headers "x-api-key"
+			
+		}
+
+		respond @options "" 200
+
+		reverse_proxy portainer:9000
+	}
+
 	@pihole host pihole.{$BASE_DOMAIN}
 	handle @pihole {
 		reverse_proxy 192.168.178.71:7070
-	}
-
-	@portainer host portainer.{$BASE_DOMAIN}
-	handle @portainer {
-		reverse_proxy portainer:9000
 	}
 
 	handle {
