@@ -14,11 +14,21 @@ links:
     url: "#homelab"
 
 services:
-  - name: "Monitoring"
-    icon: "fa-solid fa-heart-pulse"
+  - name: "Search"
+    icon: "fa-solid fa-globe"
     items:
-      - name: "Uptime Kuma"
-        logo: "assets/service-icons/uptime-kuma.svg"
-        url: "https://uptime.haenoe.xyz"
-        slug: "homelab"
-        type: "UptimeKuma"
+      - name: "Duckduckgo"
+        logo: "assets/aegis-icons/Duckduckgo.svg"
+        url: "https://duckduckgo.com"
+      - name: "Google"
+        logo: "assets/aegis-icons/Google.svg"
+        url: "https://google.com"
+      - name: "YouTube"
+        logo: "assets/aegis-icons/Youtube.svg"
+        url: "https://youtube.com"
+  - name: "Programming"
+    icon: "fa-solid fa-keyboard"
+    items:
+      - name: "Github"
+        logo: "assets/aegis-icons/GitHub.svg"
+        url: "https://github.com"

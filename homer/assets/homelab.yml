@@ -27,9 +27,9 @@ services:
     items:
       - name: "Portainer"
         logo: "assets/service-icons/portainer.svg"
-        url: "https://192.168.178.71:9443"
+        url: "https://portainer.haenoe.xyz"
         type: "Portainer"
-        apikey: "ptr_+hKB/Opo3kjiOSo4132MMeaRoEP90qpSeeYTWidvQrY="
+        apikey: "ptr_KANS3E+Fx6VaJVgr7BZA4pEsQEfZshtcRWe5uLjrq6g="
         enviroments:
           - "local"
       - name: "Vaultwarden"
@@ -38,10 +38,6 @@ services:
   - name: "Services"
     icon: "fa-solid fa-heart-pulse"
     items:
-      - name: "PiHole"
-        logo: "assets/service-icons/pihole.svg"
-        url: "https://pihole.haenoe.xyz/admin"
-        type: "PiHole"
       - name: "Migadu"
         logo: "assets/aegis-icons/Migadu.svg"
         url: "https://migadu.com"

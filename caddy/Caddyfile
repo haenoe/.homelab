@@ -43,6 +43,11 @@
 		reverse_proxy 192.168.178.71:7070
 	}
 
+    @nextcloud host nextcloud.{$BASE_DOMAIN}
+    handle @nextcloud {
+        reverse_proxy nextcloud-aio-mastercontainer:11000
+    }
+
 	handle {
 		redir https://home.haenoe.xyz/#not-found
 	}
