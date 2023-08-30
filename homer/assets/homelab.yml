@@ -25,16 +25,20 @@ services:
   - name: "Applications"
     icon: "fa-solid fa-microchip"
     items:
-      - name: "Portainer"
-        logo: "assets/service-icons/portainer.svg"
-        url: "https://portainer.haenoe.xyz"
-        type: "Portainer"
-        apikey: "ptr_KANS3E+Fx6VaJVgr7BZA4pEsQEfZshtcRWe5uLjrq6g="
-        enviroments:
-          - "local"
       - name: "Vaultwarden"
         logo: "assets/aegis-icons/Bitwarden.svg"
-        url: "https://vaultwarden.haenoe.xyz"
+        url: "https://vault.haenoe.xyz"
+        type: Ping
+        method: "GET"
+        tag: "app"
+        subtitle: "password manager"
+      - name: "Stirling PDF"
+        logo: "https://raw.githubusercontent.com/Frooodle/Stirling-PDF/main/docs/stirling.png"
+        url: "https://pdf.haenoe.xyz"
+        type: Ping
+        method: "GET"
+        tag: "app"
+        subtitle: "pdf wrangler"
   - name: "Services"
     icon: "fa-solid fa-heart-pulse"
     items:

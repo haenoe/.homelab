@@ -128,6 +128,10 @@
 
 /* Cards */
 
+#app.theme-default.is-dark .card {
+  border-radius: 10px;
+}
+
 #app.theme-default.is-dark .tag {
   background-color: var(--catppuccin-pink);
   color: var(--catppuccin-text);
