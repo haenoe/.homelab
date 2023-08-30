@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  stirling-pdf:
+    container_name: stirling-pdf
+    image: frooodle/s-pdf:0.13.0-ultra-lite
+    restart: always
+    volumes:
+      - ./configs:/configs
+networks:
+  default:
+    external: true
+    name: homelab
