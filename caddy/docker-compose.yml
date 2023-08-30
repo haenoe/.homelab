@@ -3,7 +3,7 @@ version: "3"
 services:
   caddy:
     container_name: caddy
-    image: haenoe/caddy-cloudflare:2
+    image: slothcroissant/caddy-cloudflaredns:v2.7.3
     restart: always
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
