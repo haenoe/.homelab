@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  grafana:
+    container_name: grafana
+    image: grafana/grafana-oss
+    restart: unless-stopped
+    volumes:
+      - grafana-data:/var/lib/grafana
+
+volumes:
+  grafana-data:
+
+
+networks:
+  default:
+    external: true
+    name: homelab

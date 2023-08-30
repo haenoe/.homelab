@@ -55,6 +55,11 @@
 		reverse_proxy 192.168.178.71:7070
 	}
 
+    @grafana host grafana.${BASE_DOMAIN}
+    handle @grafana {
+        reverse_proxy grafana:3000
+    }
+
 	handle {
 		redir https://home.haenoe.xyz/#not-found
 	}
