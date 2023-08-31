@@ -39,6 +39,11 @@ services:
         method: "GET"
         tag: "app"
         subtitle: "pdf wrangler"
+      - name: "Actual Budget"
+        logo: "assets/service-icons/actual.svg"
+        url: "https://budget.haenoe.xyz"
+        type: Ping
+        method: "GET"
   - name: "Services"
     icon: "fa-solid fa-heart-pulse"
     items:
