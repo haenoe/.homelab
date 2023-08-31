@@ -55,9 +55,14 @@
 		reverse_proxy stirling-pdf:8080
 	}
 
-    @grafana host grafana.${BASE_DOMAIN}
+    @grafana host grafana.{$BASE_DOMAIN}
     handle @grafana {
         reverse_proxy grafana:3000
+    }
+
+    @actual-budget host budget.{$BASE_DOMAIN}
+    handle @actual-budget {
+        reverse_proxy actual-budget:5006
     }
 
 	# @pihole host pihole.{$BASE_DOMAIN}
