@@ -3,8 +3,12 @@
 		dns cloudflare {$CLOUDFLARE_API_TOKEN}
 	}
 
-	header {
-		Access-Control-Allow-Origin home.{$BASE_DOMAIN}
+    @access-control-header {
+        not host budget.{$BASE_DOMAIN}
+    }
+
+	header @access-control-header {
+		Access-Control-Allow-Origin https://home.{$BASE_DOMAIN}
 	}
 
     encode gzip
@@ -30,9 +34,9 @@
 
 	@vaultwarden host vault.{$BASE_DOMAIN} 
 	handle @vaultwarden {
-		    reverse_proxy vaultwarden:80 {
-            		header_up X-Real-IP {remote_host}
-        	}
+		reverse_proxy vaultwarden:80 {
+            	header_up X-Real-IP {remote_host}
+        }
 	}
 
 	@home host home.{$BASE_DOMAIN}
@@ -62,10 +66,6 @@
 
     @actual-budget host budget.{$BASE_DOMAIN}
     handle @actual-budget {
-        header {
-            -Access-Control-Allow-Origin  
-        }
-
         reverse_proxy actual-budget:5006
     }
 
