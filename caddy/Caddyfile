@@ -4,7 +4,7 @@
 	}
 
 	header {
-		Access-Control-Allow-Origin "*"
+		Access-Control-Allow-Origin home.{$BASE_DOMAIN}
 	}
 
     encode gzip
@@ -62,6 +62,10 @@
 
     @actual-budget host budget.{$BASE_DOMAIN}
     handle @actual-budget {
+        header {
+            -Access-Control-Allow-Origin  
+        }
+
         reverse_proxy actual-budget:5006
     }
 
