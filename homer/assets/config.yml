@@ -22,6 +22,9 @@ services:
         url: "https://uptime.haenoe.xyz"
         slug: "homelab"
         type: "UptimeKuma"
+      - name: "Grafana"
+        logo: "assets/service-icons/grafana.svg"
+        url: "https://grafana.haenoe.xyz"
   - name: "Applications"
     icon: "fa-solid fa-microchip"
     items:
