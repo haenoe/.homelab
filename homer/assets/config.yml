@@ -50,6 +50,9 @@ services:
   - name: "Services"
     icon: "fa-solid fa-heart-pulse"
     items:
+      - name: "Wolke"
+        logo: "assets/service-icons/nextcloud.svg"
+        url: "https://cloud.haenoe.xyz"
       - name: "Migadu"
         logo: "assets/aegis-icons/Migadu.svg"
         url: "https://migadu.com"
