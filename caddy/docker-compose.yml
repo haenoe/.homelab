@@ -13,7 +13,7 @@ services:
       - 443:443
       - 80:80
     environment:
-      - BASE_DOMAIN=haenoe.xyz
+      - BASE_DOMAIN=pluto.haenoe.party
     env_file:
       - caddy.env
 

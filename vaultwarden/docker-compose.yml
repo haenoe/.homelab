@@ -15,7 +15,7 @@ services:
       WEBSOCKET_ENABLED: true
       SIGNUPS_ALLOWED: true
       SENDS_ALLOWED: false
-      DOMAIN: https://vault.haenoe.xyz
+      DOMAIN: https://vault.pluto.haenoe.party
 
   backup:
     container_name: vaultwarden-backup

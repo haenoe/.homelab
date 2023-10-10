@@ -75,6 +75,6 @@
 	# }
 
 	handle {
-		redir https://home.haenoe.xyz/#not-found
+		redir https://home.{$BASE_DOMAIN}/#not-found
 	}
 }
